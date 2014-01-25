@@ -1,0 +1,32 @@
+
+.cell {
+	width: 100px;
+	height: 100px;
+	border: 2px solid black;
+	float:left;
+	text-align: center;
+	font-size: 50px;
+	background-color: red;
+	hover-background-color: yellow;
+}
+
+
+
+.gameboard {
+	width: 300px;
+	height: 300px;
+}	
+
+.row {
+	width: 400px;
+	height: 100px;
+	padding-top: 10px;
+	padding-left: 10px;
+
+	float:left;
+
+}
+
+.clear {
+	clear:both;
+}
