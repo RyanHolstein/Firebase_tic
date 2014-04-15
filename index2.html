@@ -18,10 +18,9 @@
 	<script> var fb = new Firebase('https://rshtictactoe.firebaseio.com');</script>
 	<h2>Current Player: {{currentPlayer}}</h2>
 	<div x-ng-class="{row: true, clear: true}"
-	 x-ng-repeat = "row in obj.gameBoard track by $index">
-		<div class="cell" 
-		x-ng-repeat="cell in row track by $index" 
-		x-ng-click = "takeTurn($parent.$index,$index)">
+	     x-ng-repeat = "row in obj.gameBoard track by $index">
+		<div class="cell" x-ng-repeat="cell in row track by $index" 
+		     x-ng-click = "takeTurn($parent.$index,$index)">
 		{{cell}}
 		</div>
 	</div>

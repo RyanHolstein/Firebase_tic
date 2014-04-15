@@ -9,7 +9,8 @@ angular.module("coolio", ["firebase"])
  	$scope.fbRoot = $firebase(ticTacRef);
 
  	// Wait until everything really is loaded
- 	$scope.fbRoot.$on("loaded", function() {
+ 	$scope.fbRoot.$on("loaded", function() 
+ 	{
 		IDs = $scope.fbRoot.$getIndex();
 		if(IDs.length == 0)
 		{
@@ -49,36 +50,34 @@ angular.module("coolio", ["firebase"])
 	};
 
 		
-
-
-
-
-// function gameBoardCtrl($scope) {
-// 	$scope.gameBoard = [[null,null,null],[null,null,null],[null,null,null]];
-	
-
-	$scope.reset = function() {
+	$scope.reset = function()
+	 {
 		$scope.obj.gameBoard = [['','',''],['','',''],['','','']];
 		$scope.obj.xTurn = 'X'
-	};
+	 };
 	
 
-	function checkRow(row) {
+	function checkRow(row) 
+	{
 		return $scope.obj.gameBoard[row][0] == $scope.obj.gameBoard[row][1] && $scope.obj.gameBoard[row][0] == $scope.obj.gameBoard[row][2] && $scope.obj.gameBoard[row][0] != '';
+	}
 
-		}
-
-	function checkColumn(cell){
+	function checkColumn(cell)
+	{
 		return $scope.obj.gameBoard[0][cell] == $scope.obj.gameBoard[1][cell] && $scope.obj.gameBoard[0][cell] == $scope.obj.gameBoard[2][cell] && $scope.obj.gameBoard[0][cell] != '';
 	}		
 
-	function checkDiag1(){
+	function checkDiag1()
+	{
 		return $scope.obj.gameBoard[0][0] == $scope.obj.gameBoard[1][1] && $scope.obj.gameBoard[0][0] == $scope.obj.gameBoard[2][2] && $scope.obj.gameBoard[0][0] != '';
 	}	
 
-	function checkDiag2(){
+	function checkDiag2()
+	{
 		return $scope.obj.gameBoard[0][2] == $scope.obj.gameBoard[1][1] && $scope.obj.gameBoard[0][2] == $scope.obj.gameBoard[2][0] && $scope.obj.gameBoard[0][2] != '';
 	}
+
+	
 
 	$scope.checkWin = function() 
 	{
