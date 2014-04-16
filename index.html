@@ -13,10 +13,10 @@
 
 </head>
 
-
-<body x-ng-controller= "gameBoardCtrl">
+<div id="whole">
+<body x-ng-controller= "gameBoardCtrl" >
 	<script> var fb = new Firebase('https://rshtictactoe.firebaseio.com');</script>
-	<h2>Current Player: {{currentPlayer}}</h2>
+	<h2>Tic Tac Toe (Multiplayer){{currentPlayer}}</h2>
 	<div x-ng-class="{row: true, clear: true}"
 	     x-ng-repeat = "row in obj.gameBoard track by $index">
 		<div class="cell" x-ng-repeat="cell in row track by $index" 
@@ -28,7 +28,7 @@
 		<button x-ng-click="reset()">clear board</button>
 	</div>
 
-    
+    </div>
 
 </body>
 </html>
